@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Simple Marksheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Marksheet System</h1>
+
+        <div class="action-selector">
+            <button id="show-add-btn" class="active">Add New Student</button>
+            <button id="show-view-btn">View Existing Student</button>
+        </div>
+
+        <hr>
+
+        <div id="add-student-section">
+            <h2>Add New Student</h2>
+            <form id="add-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="uniqueIdAdd">Unique ID:</label>
+                <input type="text" id="uniqueIdAdd" name="uniqueId" required>
+
+                <label for="subject1">Subject 1 Marks:</label>
+                <input type="number" id="subject1" name="subject1" required min="0" max="100">
+
+                <label for="subject2">Subject 2 Marks:</label>
+                <input type="number" id="subject2" name="subject2" required min="0" max="100">
+
+                <label for="subject3">Subject 3 Marks:</label>
+                <input type="number" id="subject3" name="subject3" required min="0" max="100">
+
+                <label for="subject4">Subject 4 Marks:</label>
+                <input type="number" id="subject4" name="subject4" required min="0" max="100">
+
+                <button type="submit">Add Student</button>
+            </form>
+             <div id="add-message" class="message"></div>
+        </div>
+
+        <div id="view-student-section" style="display: none;">
+            <h2>View Student Details</h2>
+            <form id="view-form">
+                <label for="uniqueIdView">Enter Unique ID:</label>
+                <input type="text" id="uniqueIdView" name="uniqueIdView" required>
+                <button type="submit">Fetch Details</button>
+            </form>
+            <div id="student-details" class="results">
+                </div>
+             <div id="view-message" class="message error"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
